@@ -62,8 +62,116 @@
             </mat-card-content>
           </mat-card>
         </div>
-        <div class="swiper-slide">2</div>
-        <div class="swiper-slide">3</div>
+        <div class="swiper-slide">
+          <mat-card>
+            <mat-card-header> </mat-card-header>
+            <mat-card-content>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div class="col-span-1">
+                  <label for="ffn" compulsory>Child's First Name</label>
+                  <input
+                    type="text"
+                    name="ffn"
+                    id="ffn"
+                    formControlName="fatherFirstName"
+                  />
+                  <p class="errorText">Child's Last name is required</p>
+                </div>
+                <div class="col-span-1">
+                  <label for="fln" compulsory>Child's Last Name</label>
+                  <input
+                    type="text"
+                    name="fln"
+                    id="fln"
+                    formControlName="fatherLastName"
+                  />
+                  <p class="errorText">Place of birth is required</p>
+                </div>
+                <div class="col-span-1">
+                  <label for="mfn" compulsory>Place of birth</label>
+                  <input
+                    type="text"
+                    name="mfn"
+                    id="mfn"
+                    formControlName="motherFirstName"
+                  />
+                  <p class="errorText">Sex</p>
+                </div>
+                <div class="col-span-1">
+                  <label for="mln" compulsory>sex</label>
+                  <input
+                    type="text"
+                    name="mln"
+                    id="mln"
+                    formControlName="sex"
+                  />
+                  <p class="errorText">Date of Registration</p>
+                </div>
+              </div>
+              <div class="text-center my-5">
+                <button
+                  (click)="firstSlideNext()"
+                  type="button"
+                  class="py-2 px-10 md:px-16 text-white rounded-md bg-[#26269E]"
+                >
+                  Next
+                </button>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div class="swiper-slide">
+          <mat-card>
+            <mat-card-header> </mat-card-header>
+            <mat-card-content>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div class="col-span-1">
+                  <label for="ffn" compulsory
+                    >Address of Parents at time of Birth</label
+                  >
+                  <input
+                    type="text"
+                    name="ffn"
+                    id="ffn"
+                    formControlName="fAddressof Parents at time of Birth"
+                  />
+                  <p class="errorText">Permanent address of parents</p>
+                </div>
+                <div class="col-span-1">
+                  <label for="fln" compulsory
+                    >Permanent address of parents</label
+                  >
+                  <input
+                    type="text"
+                    name="fln"
+                    id="fln"
+                    formControlName="fatherLastName"
+                  />
+                  <p class="errorText">District</p>
+                </div>
+                <div class="col-span-1">
+                  <label for="mfn" compulsory>District</label>
+                  <input
+                    type="text"
+                    name="mfn"
+                    id="mfn"
+                    formControlName="motherFirstName"
+                  />
+                  <p class="errorText">Mother's First name is required</p>
+                </div>
+              </div>
+              <div class="text-center my-5">
+                <button
+                  (click)="firstSlideNext()"
+                  type="button"
+                  class="py-2 px-10 md:px-16 text-white rounded-md bg-[#26269E]"
+                >
+                  Submit
+                </button>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
       </div>
     </div>
   </form>

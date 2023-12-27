@@ -19,11 +19,8 @@ export class BirthRegFormComponent implements OnInit {
       motherFirstName: ['', Validators.required],
       motherLastName: ['', Validators.required],
       birthAddress: ['', Validators.required],
-      block: ['', Validators.required],
       permanentAddress: ['', Validators.required],
       district: ['', Validators.required],
-      localArea: ['', Validators.required],
-      unionTerritory: ['', Validators.required],
     });
   }
 
@@ -54,22 +51,22 @@ export class BirthRegFormComponent implements OnInit {
 
   firstSlideNext() {
     this.slideNext();
-    // const controls = [
-    //   'fatherFirstName',
-    //   'fatherLastName',
-    //   'motherFirstName',
-    //   'motherLastName',
-    // ];
+    const controls = [
+      'fatherFirstName',
+      'fatherLastName',
+      'motherFirstName',
+      'motherLastName',
+    ];
 
-    // if (!controls.every((control) => this.formData.get(control)?.valid)) {
-    //   controls.forEach((control) => {
-    //     if (this.formData.get(control)?.invalid) {
-    //       this.formData.get(control)?.markAsTouched();
-    //     }
-    //   });
-    // } else {
-    //   this.slideNext();
-    // }
+    if (!controls.every((control) => this.formData.get(control)?.valid)) {
+      controls.forEach((control) => {
+        if (this.formData.get(control)?.invalid) {
+          this.formData.get(control)?.markAsTouched();
+        }
+      });
+    } else {
+      this.slideNext();
+    }
   }
 
   onSubmit() {
