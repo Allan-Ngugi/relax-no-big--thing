@@ -5,17 +5,17 @@ import { SignupComponent } from './components/signup/signup.component';
 
 const AUTH_ROUTES: Route[] = [
   {
-    path: '',
-    redirectTo: 'login',
-    pathMatch: 'full',
-  },
-  {
     path: 'login',
     component: LoginComponent,
   },
   {
     path: 'signup',
     component: SignupComponent,
+  },
+  {
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full',
   },
 ];
 @NgModule({

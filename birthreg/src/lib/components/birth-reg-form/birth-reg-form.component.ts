@@ -20,7 +20,11 @@ export class BirthRegFormComponent implements OnInit {
       motherLastName: ['', Validators.required],
       birthAddress: ['', Validators.required],
       permanentAddress: ['', Validators.required],
+      dateOfRegistration: ['', Validators.required],
       district: ['', Validators.required],
+      placeOfBirth: ['', Validators.required],
+      addressOfParentsAtTimeOfBirth: ['', Validators.required],
+      PermanentAddressOfParents: ['', Validators.required],
     });
   }
 
