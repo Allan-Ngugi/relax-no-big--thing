@@ -24,9 +24,9 @@ import { FooterComponent } from 'features/src/lib/components/footer/footer.compo
 export class HomeComponent {
   title = 'reg-angular';
   applyForm = new FormGroup({
-    fullname: new FormControl('', Validators.required),
+    fullName: new FormControl('', Validators.required),
     email: new FormControl('', Validators.required),
-    Address: new FormControl(''),
+    address: new FormControl(''),
     message: new FormControl(''),
   });
 
