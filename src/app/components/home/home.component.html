@@ -1,18 +1,18 @@
-<div class="bg-slate-200">
+<div class="bg-slate-200 font-overpass">
   <div class="justify-center pt-[1%]">
     <reg-angular-navbar></reg-angular-navbar>
   </div>
   <div
-    class="h-[500px] bg-[#26269E] flex mx-6 mt-20 pt-10 rounded-lg text-[#FFFFFF]"
+    class="md:h-[500px] h-[660px] bg-[#26269E] flex flex-col-reverse md:flex-row mx-6 mt-20 pt-10 rounded-lg text-[#FFFFFF]"
   >
-    <div class="font-Overpass pl-12">
+    <div class="md:w-1/2 pl-12 font-overpass">
       <h4 class="pt-8 text-lg font-[400] text-[22px]">
         Streamlined Birth and Death Registration
       </h4>
-      <h1 class="pt-4 text-[55px] font-bold">
+      <h1 class="pt-4 md:text-[55px] md:font-[600]">
         A Seamless Path to Vital Records
       </h1>
-      <p class="pt-4 text-[18px] font-Overpass">
+      <p class="pt-4 text-[18px] font-thin">
         Welcome to our innovative Birth and Death Registration System, <br />
         designed to simplify and enhance the process of documenting <br />
         life's significant events. Our platform seamlessly integrates <br />
@@ -21,10 +21,16 @@
         deaths.
       </p>
     </div>
-    <div class="pl-[15%] pb-11">
-      <img src="assets/images/landing.png" alt="landing-img" />
+
+    <div class="md:w-1/2 pl-12 pb-11">
+      <img
+        src="assets/images/landing.png"
+        alt="landing-img"
+        class="w-full h-auto md:max-h-[400px] mx-auto"
+      />
     </div>
   </div>
+
   <section class="pt-20">
     <div class="text-center">
       <h4 class="text-[#63CD7C]">CUSTOMIZATIONS</h4>
@@ -51,33 +57,8 @@
           record deaths.
         </p>
         <section class="pt-6">
-          <span>
-            <svg
-              width="30"
-              height="30"
-              viewBox="0 0 30 30"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-            >
-              <rect width="30" height="30" fill="url(#pattern0)" />
-              <defs>
-                <pattern
-                  id="pattern0"
-                  patternContentUnits="objectBoundingBox"
-                  width="1"
-                  height="1"
-                >
-                  <use xlink:href="#image0_10_32" transform="scale(0.01)" />
-                </pattern>
-                <image
-                  id="image0_10_32"
-                  width="100"
-                  height="100"
-                  xlink:href="data:image/png;base64,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"
-                />
-              </defs>
-            </svg>
+          <span class="">
+            <img src="assets/icons/Verified Account.svg" alt="icons-verified" />
           </span>
           <h3 class="font-semibold text-[20px]">
             Effortless Registration Process
@@ -91,32 +72,7 @@
         </section>
         <section class="pt-6">
           <span>
-            <svg
-              width="30"
-              height="30"
-              viewBox="0 0 30 30"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-            >
-              <rect width="30" height="30" fill="url(#pattern0)" />
-              <defs>
-                <pattern
-                  id="pattern0"
-                  patternContentUnits="objectBoundingBox"
-                  width="1"
-                  height="1"
-                >
-                  <use xlink:href="#image0_10_32" transform="scale(0.01)" />
-                </pattern>
-                <image
-                  id="image0_10_32"
-                  width="100"
-                  height="100"
-                  xlink:href="data:image/png;base64,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"
-                />
-              </defs>
-            </svg>
+            <img src="assets/icons/Verified Account.svg" alt="icons-verified" />
           </span>
           <h3 class="font-semibold text-[20px]">
             Instant Notification to Relevant Services
@@ -130,32 +86,7 @@
         </section>
         <section class="pt-6">
           <span>
-            <svg
-              width="30"
-              height="30"
-              viewBox="0 0 30 30"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-            >
-              <rect width="30" height="30" fill="url(#pattern0)" />
-              <defs>
-                <pattern
-                  id="pattern0"
-                  patternContentUnits="objectBoundingBox"
-                  width="1"
-                  height="1"
-                >
-                  <use xlink:href="#image0_10_32" transform="scale(0.01)" />
-                </pattern>
-                <image
-                  id="image0_10_32"
-                  width="100"
-                  height="100"
-                  xlink:href="data:image/png;base64,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"
-                />
-              </defs>
-            </svg>
+            <img src="assets/icons/Verified Account.svg" alt="icons-verified" />
           </span>
           <h3 class="font-semibold text-[20px]">
             Quick Access to Essential Documents
@@ -179,7 +110,9 @@
       <div
         class="mx-3 h-[250px] w-[450px] bg-emerald-50 bg-opacity-10 rounded-[20px] shadow"
       >
-        <span> </span>
+        <span class="pt-[40px]">
+          <img src="assets/icons/Clock.svg" alt="icons-verified" />
+        </span>
         <h2 class="pt-28 text-[20px] font-semibold mx-4">
           Efficiency Redefined
         </h2>
@@ -191,60 +124,75 @@
       <div
         class="mx-3 h-[250px] w-[450px] bg-emerald-50 bg-opacity-10 rounded-[20px] shadow"
       >
-        <span> </span>
+        <span>
+          <img src="assets/icons/Checkmark.svg" alt="icons-verified" />
+        </span>
         <h2 class="pt-28 text-[20px] font-semibold mx-4">
-          Efficiency Redefined
+          User-Centric Convenience
         </h2>
         <p class="font-thin mx-4">
-          Revolutionize registration: Break free from bureaucracy, eliminate
-          paperwork, and streamline birth and death processes efficiently.
+          Our user-friendly platform prioritizes convenience for effortless
+          childbirth registration, while Municipal Offices benefit from
+          efficient death recording.
         </p>
       </div>
       <div
         class="mx-3 h-[250px] w-[450px] bg-emerald-50 bg-opacity-10 rounded-[20px] shadow"
       >
+        <span>
+          <img src="assets/icons/Add Reminder.svg" alt="icons-verified" />
+        </span>
         <h2 class="pt-28 text-[20px] font-semibold mx-4">
-          Efficiency Redefined
+          Swift Notification System
         </h2>
         <p class="font-thin mx-4">
-          Revolutionize registration: Break free from bureaucracy, eliminate
-          paperwork, and streamline birth and death processes efficiently.
+          Instantly notify services upon death registration, ensuring prompt
+          updates. Automate communication with tear-down services for enhanced
+          efficiency.
         </p>
       </div>
       <div
         class="mx-3 h-[250px] w-[450px] bg-emerald-50 bg-opacity-10 rounded-[20px] shadow"
       >
-        <span> </span>
+        <span>
+          <img src="assets/icons/Shield.svg" alt="icons-verified" />
+        </span>
         <h2 class="pt-28 text-[20px] font-semibold mx-4">
-          Efficiency Redefined
+          Security and Privacy Assurance
         </h2>
         <p class="font-thin mx-4">
-          Revolutionize registration: Break free from bureaucracy, eliminate
-          paperwork, and streamline birth and death processes efficiently.
+          Rest easy with our platform's top priority: ensuring robust security
+          and privacy measures for a trustworthy registration process.
         </p>
       </div>
       <div
         class="mx-3 h-[250px] w-[450px] bg-emerald-50 bg-opacity-10 rounded-[20px] shadow"
       >
-        <span> </span>
+        <span>
+          <img src="assets/icons/Mobile.svg" alt="icons-verified" />
+        </span>
         <h2 class="pt-28 text-[20px] font-semibold mx-4">
-          Efficiency Redefined
+          Mobile Accessibility
         </h2>
         <p class="font-thin mx-4">
-          Revolutionize registration: Break free from bureaucracy, eliminate
-          paperwork, and streamline birth and death processes efficiently.
+          Access our mobile-friendly platform for flexible event registration,
+          document access, and seamless vital record management anytime,
+          anywhere.
         </p>
       </div>
       <div
         class="mx-3 h-[250px] w-[450px] bg-emerald-50 bg-opacity-10 rounded-[20px] shadow"
       >
-        <span> </span>
+        <span>
+          <img src="assets/icons/People.svg" alt="icons-verified" />
+        </span>
         <h2 class="pt-28 text-[20px] font-semibold mx-4">
-          Efficiency Redefined
+          Community Empowerment
         </h2>
         <p class="font-thin mx-4">
-          Revolutionize registration: Break free from bureaucracy, eliminate
-          paperwork, and streamline birth and death processes efficiently.
+          Join our community-driven mission to empower individuals, contributing
+          to a society with accessible, efficient, and personalized vital record
+          management.
         </p>
       </div>
     </div>

@@ -64,7 +64,9 @@
         </div>
         <div class="swiper-slide">
           <mat-card>
-            <mat-card-header> </mat-card-header>
+            <mat-card-header>
+              <mat-card-title>Child's Information</mat-card-title>
+            </mat-card-header>
             <mat-card-content>
               <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
                 <div class="col-span-1">
@@ -93,9 +95,9 @@
                     type="text"
                     name="mfn"
                     id="mfn"
-                    formControlName="motherFirstName"
+                    formControlName="PlaceOfBirth"
                   />
-                  <p class="errorText">Sex</p>
+                  <p class="errorText"></p>
                 </div>
                 <div class="col-span-1">
                   <label for="mln" compulsory>sex</label>
@@ -122,7 +124,9 @@
         </div>
         <div class="swiper-slide">
           <mat-card>
-            <mat-card-header> </mat-card-header>
+            <mat-card-header>
+              <mat-card-title>Locations Information</mat-card-title>
+            </mat-card-header>
             <mat-card-content>
               <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
                 <div class="col-span-1">
@@ -133,7 +137,7 @@
                     type="text"
                     name="ffn"
                     id="ffn"
-                    formControlName="fAddressof Parents at time of Birth"
+                    formControlName="addressofparentsattimeofbirth"
                   />
                   <p class="errorText">Permanent address of parents</p>
                 </div>
@@ -145,7 +149,7 @@
                     type="text"
                     name="fln"
                     id="fln"
-                    formControlName="fatherLastName"
+                    formControlName="permanentaddressofparents"
                   />
                   <p class="errorText">District</p>
                 </div>
@@ -155,9 +159,9 @@
                     type="text"
                     name="mfn"
                     id="mfn"
-                    formControlName="motherFirstName"
+                    formControlName="district"
                   />
-                  <p class="errorText">Mother's First name is required</p>
+                  <p class="errorText">District name is required</p>
                 </div>
               </div>
               <div class="text-center my-5">
