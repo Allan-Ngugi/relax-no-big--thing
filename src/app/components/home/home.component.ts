@@ -33,4 +33,10 @@ export class HomeComponent {
   get email() {
     return this.applyForm.get('email');
   }
+  onSubmit() {
+    if (this.applyForm.valid) {
+      console.log('Form Submitted!');
+      this.applyForm.reset();
+    }
+  }
 }
