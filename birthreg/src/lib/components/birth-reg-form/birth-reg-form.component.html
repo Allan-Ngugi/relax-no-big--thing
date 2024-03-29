@@ -75,9 +75,9 @@
                     type="text"
                     name="ffn"
                     id="ffn"
-                    formControlName="fatherFirstName"
+                    formControlName="childsFirstName"
                   />
-                  <p class="errorText">Child's Last name is required</p>
+                  <p class="errorText">Child's First name is required</p>
                 </div>
                 <div class="col-span-1">
                   <label for="fln" compulsory>Child's Last Name</label>
@@ -85,9 +85,19 @@
                     type="text"
                     name="fln"
                     id="fln"
-                    formControlName="fatherLastName"
+                    formControlName="childsLastName"
                   />
-                  <p class="errorText">Place of birth is required</p>
+                  <p class="errorText">Child's Lastname is required</p>
+                </div>
+                <div class="col-span-1">
+                  <label for="fln" compulsory>Sex</label>
+                  <input
+                    type="text"
+                    name="fln"
+                    id="fln"
+                    formControlName="sex"
+                  />
+                  <p class="errorText">sex</p>
                 </div>
                 <div class="col-span-1">
                   <label for="mfn" compulsory>Place of birth</label>
@@ -95,19 +105,19 @@
                     type="text"
                     name="mfn"
                     id="mfn"
-                    formControlName="PlaceOfBirth"
+                    formControlName="placeOfBirth"
                   />
                   <p class="errorText"></p>
                 </div>
                 <div class="col-span-1">
-                  <label for="mln" compulsory>sex</label>
+                  <label for="mln" compulsory>Date of Registration</label>
                   <input
                     type="text"
                     name="mln"
                     id="mln"
-                    formControlName="sex"
+                    formControlName="dateOfRegistration"
                   />
-                  <p class="errorText">Date of Registration</p>
+                  <p class="errorText">Date of Registration is Required</p>
                 </div>
               </div>
               <div class="text-center my-5">
@@ -130,44 +140,39 @@
             <mat-card-content>
               <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
                 <div class="col-span-1">
-                  <label for="ffn" compulsory
-                    >Address of Parents at time of Birth</label
-                  >
+                  <label for="ffn" compulsory>Address at time of Birth</label>
                   <input
                     type="text"
                     name="ffn"
                     id="ffn"
-                    formControlName="addressofparentsattimeofbirth"
+                    formControlName="addressAtTimeOfBirth"
                   />
-                  <p class="errorText">Permanent address of parents</p>
+                  <p class="errorText">Address At Time Of Birth</p>
                 </div>
                 <div class="col-span-1">
-                  <label for="fln" compulsory
-                    >Permanent address of parents</label
-                  >
+                  <label for="fln" compulsory>District</label>
                   <input
                     type="text"
                     name="fln"
                     id="fln"
-                    formControlName="permanentaddressofparents"
+                    formControlName="district"
                   />
                   <p class="errorText">District</p>
                 </div>
                 <div class="col-span-1">
-                  <label for="mfn" compulsory>District</label>
+                  <label for="mfn" compulsory>Permanent Address</label>
                   <input
                     type="text"
                     name="mfn"
                     id="mfn"
-                    formControlName="district"
+                    formControlName="PermanentAddress"
                   />
-                  <p class="errorText">District name is required</p>
+                  <p class="errorText">PermanentAddress</p>
                 </div>
               </div>
               <div class="text-center my-5">
                 <button
-                  (click)="firstSlideNext()"
-                  type="button"
+                  type="submit"
                   class="py-2 px-10 md:px-16 text-white rounded-md bg-[#26269E]"
                 >
                   Submit

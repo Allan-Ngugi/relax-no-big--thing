@@ -20,6 +20,7 @@
       "@reg-angular/birthreg": ["birthreg/src/index.ts"],
       "@reg-angular/deathreg": ["deathreg/src/index.ts"],
       "@reg-angular/features": ["features/src/index.ts"],
+      "@reg-angular/notification": ["notification/src/index.ts"],
       "@reg-angular/shared": ["shared/src/index.ts"]
     }
   },

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import Swiper from 'swiper';
+import { BirthRegService } from '../../services/birthreg.service';
+import { AuthService } from 'auth/src/lib/services/auth.service';
 
 @Component({
   selector: 'reg-angular-birth-reg-form',
@@ -9,22 +11,27 @@ import Swiper from 'swiper';
 })
 export class BirthRegFormComponent implements OnInit {
   private swiper: Swiper | undefined;
-  currentSlide = 1;
+  currentSlide = 0;
   formData: FormGroup;
 
-  constructor(private _fb: FormBuilder) {
+  constructor(
+    private _fb: FormBuilder,
+    private birthRegService: BirthRegService,
+    private authService: AuthService
+  ) {
     this.formData = _fb.group({
       fatherFirstName: ['', Validators.required],
       fatherLastName: ['', Validators.required],
       motherFirstName: ['', Validators.required],
       motherLastName: ['', Validators.required],
-      birthAddress: ['', Validators.required],
-      permanentAddress: ['', Validators.required],
-      dateOfRegistration: ['', Validators.required],
-      district: ['', Validators.required],
+      childsFirstName: ['', Validators.required],
+      childsLastName: ['', Validators.required],
+      sex: ['', Validators.required],
       placeOfBirth: ['', Validators.required],
-      addressOfParentsAtTimeOfBirth: ['', Validators.required],
-      PermanentAddressOfParents: ['', Validators.required],
+      dateOfRegistration: ['', Validators.required],
+      addressAtTimeOfBirth: ['', Validators.required],
+      district: ['', Validators.required],
+      PermanentAddress: ['', Validators.required],
     });
   }
 
@@ -33,8 +40,8 @@ export class BirthRegFormComponent implements OnInit {
       slidesPerView: 1,
       spaceBetween: 20,
       allowTouchMove: false,
-      // initialSlide: 4,
-      // autoHeight: true,
+      initialSlide: this.currentSlide,
+      autoHeight: true,
       speed: 500,
     });
   }
@@ -54,7 +61,6 @@ export class BirthRegFormComponent implements OnInit {
   }
 
   firstSlideNext() {
-    this.slideNext();
     const controls = [
       'fatherFirstName',
       'fatherLastName',
@@ -62,20 +68,43 @@ export class BirthRegFormComponent implements OnInit {
       'motherLastName',
     ];
 
-    if (!controls.every((control) => this.formData.get(control)?.valid)) {
+    if (controls.every((control) => this.formData.get(control)?.valid)) {
+      this.slideNext();
+    } else {
       controls.forEach((control) => {
         if (this.formData.get(control)?.invalid) {
           this.formData.get(control)?.markAsTouched();
         }
       });
-    } else {
-      this.slideNext();
     }
   }
 
   onSubmit() {
-    console.log(this.formData.value);
+    if (this.formData.valid) {
+      const userId = this.authService.getCurrentUserId();
+      if (typeof userId === 'number') {
+        this.birthRegService
+          .createBirthReg(userId, this.formData.value)
+          .subscribe(
+            (response) => {
+              console.log('Success!', response);
+              this.formData.reset();
+              this.currentSlide = 0;
+              this.swiper?.slideTo(this.currentSlide);
+            },
+            (error) => {
+              console.error('Error!', error);
+            }
+          );
+      } else {
+        console.error('User ID is null, cannot submit form.');
+      }
+    } else {
+      this.formData.markAllAsTouched();
+    }
+    this.formData.reset(this.formData.value);
   }
+
   ngOnInit(): void {
     this.initSwiper();
   }

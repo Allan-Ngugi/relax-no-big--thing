@@ -22,6 +22,12 @@ const SHARED_ROUTES: Route[] = [
         loadChildren: () =>
           import('@reg-angular/deathreg').then((m) => m.DeathRegModule),
       },
+      {
+        path: 'notification',
+        loadChildren: () =>
+          // eslint-disable-next-line @nx/enforce-module-boundaries
+          import('@reg-angular/notification').then((m) => m.NotificationModule),
+      },
     ],
   },
 ];
